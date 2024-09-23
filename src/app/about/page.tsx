@@ -63,7 +63,7 @@ const structure = [
 export default function About() {
     return (
         <Flex
-            style={{ width: '100%', height: '100%', overflow: 'hidden' }}
+            style={{ width: '80%', height: '100%', overflow: 'hidden' }}
             fillWidth
             direction="column"
         >
@@ -91,7 +91,7 @@ export default function About() {
             />
             {about.tableOfContent.display && (
                 <Flex
-                    style={{ left: '0', top: '50%', transform: 'translateY(-50%)' }}
+                    style={{ left: '5%', top: '50%', transform: 'translateY(-50%)' }}
                     position="fixed"
                     paddingLeft="24"
                     gap="32"
@@ -113,14 +113,20 @@ export default function About() {
                         alignItems="center"
                     >
                         <Avatar src={person.avatar} size="xl" />
-                        <Flex gap="4" alignItems="center">
+                        <Flex gap="8" alignItems="center">
                             <Icon onBackground="accent-weak" name="globe" />
                             {person.location}
                         </Flex>
                         {person.languages.length > 0 && (
                             <Flex wrap gap="4">
                                 <Flex
-                                    style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', width: '20%' }}
+                                    style={{ 
+                                        display: 'grid',
+                                        gridTemplateColumns: 'repeat(2, 1fr)',
+                                        gap: '8px',
+                                        width: '40%',
+                                        marginLeft: '25%' 
+                                    }}
                                 >
                                     {person.languages.map((language, index) => (
                                         <Tag key={index} size="l">
